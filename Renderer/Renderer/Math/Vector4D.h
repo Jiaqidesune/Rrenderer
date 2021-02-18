@@ -1,6 +1,7 @@
 #pragma once
 
 #include "MathUtil.h"
+#include "vector3D.h"
 
 namespace kawaii
 {

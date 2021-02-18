@@ -4,6 +4,7 @@
 #include "Math/Vector4D.h"
 
 using namespace kawaii;
+
 int main()
 {
 	Vector2D v(1.0, 1.0);

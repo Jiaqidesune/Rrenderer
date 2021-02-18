@@ -1,3 +1,4 @@
+#pragma once
 #include "MathUtil.h"
 
 namespace kawaii
