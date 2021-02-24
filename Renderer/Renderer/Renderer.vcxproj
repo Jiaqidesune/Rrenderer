@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Core\Camera.cpp" />
+    <ClCompile Include="Core\tgaimage.cpp" />
     <ClCompile Include="Core\Transform.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Math\Matrix4x4.cpp" />
@@ -150,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Camera.h" />
+    <ClInclude Include="Core\tgaimage.h" />
     <ClInclude Include="Core\Transform.h" />
     <ClInclude Include="Math\MathUtil.h" />
     <ClInclude Include="Math\Matrix4x4.h" />
