@@ -141,26 +141,32 @@
   <ItemGroup>
     <ClCompile Include="Core\Camera.cpp" />
     <ClCompile Include="Core\Model.cpp" />
+    <ClCompile Include="Core\stb_image.cpp" />
     <ClCompile Include="Core\tgaimage.cpp" />
     <ClCompile Include="Core\Transform.cpp" />
+    <ClCompile Include="Core\Window.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Math\Matrix4x4.cpp" />
     <ClCompile Include="Math\Quaternion.cpp" />
     <ClCompile Include="Math\Vector2D.cpp" />
     <ClCompile Include="Math\Vector3D.cpp" />
     <ClCompile Include="Math\Vector4D.cpp" />
+    <ClCompile Include="Setting\Setting.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Camera.h" />
     <ClInclude Include="Core\Model.h" />
+    <ClInclude Include="Core\stb_image.h" />
     <ClInclude Include="Core\tgaimage.h" />
     <ClInclude Include="Core\Transform.h" />
+    <ClInclude Include="Core\Window.h" />
     <ClInclude Include="Math\MathUtil.h" />
     <ClInclude Include="Math\Matrix4x4.h" />
     <ClInclude Include="Math\Quaternion.h" />
     <ClInclude Include="Math\Vector2D.h" />
     <ClInclude Include="Math\Vector3D.h" />
     <ClInclude Include="Math\Vector4D.h" />
+    <ClInclude Include="Setting\Setting.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,11 +4,15 @@
 #include "Math/Vector4D.h"
 #include "Core/Model.h"
 #include "Core/tgaimage.h"
-
+#include "Core/stb_image.h"
+#include "Core/Window.h"
+#include <wrl/client.h>
+#include <wrl/event.h>
 using namespace kawaii;
-
+#pragma comment(lib, "runtimeobject.lib")
 const TGAColor white = TGAColor(255, 255, 255, 255);
 const TGAColor red = TGAColor(255, 0, 0, 255);
+
 Model* model = NULL;
 const int width = 800;
 const int height = 800;
@@ -40,9 +44,11 @@ void line(int x0, int y0, int x1, int y1, TGAImage& image, TGAColor color) {
 
 int main()
 {
-   
-   model = new Model("obj/african_head.obj");
+    Microsoft::WRL::Wrappers::RoInitializeWrapper InitializeWinRT(RO_INIT_MULTITHREADED);
+    HINSTANCE hInst = GetModuleHandle(0);
+    Window newWindow(hInst);
 
+    model = new Model("obj/african_head.obj");
 
     TGAImage image(width, height, TGAImage::RGB);
     for (int i = 0; i < model->getFaces(); i++) {
@@ -61,5 +67,12 @@ int main()
     image.flip_vertically(); // i want to have the origin at the left bottom corner of the image
     image.write_tga_file("output.tga");
     delete model;
-    return 0;
+
+    int ret = 0;
+    if(newWindow.Init())
+    {
+        ret = newWindow.Run();
+    }
+
+    return ret;
 }
